@@ -9,7 +9,10 @@
     
  <!-- configure spring beans -->    
 
-
+	<!-- load the properties file: sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+	
+	
 
 	<!-- define the dependency -->
 	
@@ -35,8 +38,11 @@
 		
 		<!-- inject literal values -->
 		
-		<property name="emailAddress" value="hecthor@quality.com"></property>
-		<property name="team" value="Quality Assurance"></property>
+		<property name="emailAddress" value="${foo.email}"></property>
+		<property name="team" value="${foo.team}"></property>
+		
+		
+		
 	</bean>
 	
 	
