@@ -33,6 +33,10 @@
 		<!-- set up injection -->
 		<property name="fortuneService" ref="myFortuneService"></property>
 		
+		<!-- inject literal values -->
+		
+		<property name="emailAddress" value="hecthor@quality.com"></property>
+		<property name="team" value="Quality Assurance"></property>
 	</bean>
 	
 	
