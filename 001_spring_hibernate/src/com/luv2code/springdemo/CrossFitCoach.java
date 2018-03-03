@@ -8,4 +8,10 @@ public class CrossFitCoach implements Coach {
 		return "Lift 10kg";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
