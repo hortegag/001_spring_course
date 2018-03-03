@@ -20,6 +20,10 @@
 		class="com.luv2code.springdemo.HappyFortuneService">
 	</bean>
 	
+	<bean id="myRandomFortuneService"
+		class="com.luv2code.springdemo.RandomFortuneService">
+	</bean>
+	
 	<bean id="myCoach"
 		class="com.luv2code.springdemo.TrackCoach">
 		
@@ -42,6 +46,14 @@
 		<property name="team" value="${foo.team}"></property>
 		
 		
+		
+	</bean>
+	
+		
+	<bean id="myCrossFitCoach"
+		class="com.luv2code.springdemo.CrossFitCoach">
+		<!-- set up injection -->
+		<constructor-arg ref="myRandomFortuneService"></constructor-arg>
 		
 	</bean>
 	
