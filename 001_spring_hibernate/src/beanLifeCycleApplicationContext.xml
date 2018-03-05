@@ -23,7 +23,8 @@
 	<bean id="myCoach"
 		class="com.luv2code.springdemo.TrackCoach"
 		scope="prototype"
-		>
+		init-method="doMyStartupStuff"
+		destroy-method="doMyCleanUpStuff">
 		
 		<!-- set up constructor injection -->
 		
