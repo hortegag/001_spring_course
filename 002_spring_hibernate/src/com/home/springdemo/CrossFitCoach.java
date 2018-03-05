@@ -11,4 +11,10 @@ public class CrossFitCoach implements Coach {
 		return "Make 30 push ups";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
