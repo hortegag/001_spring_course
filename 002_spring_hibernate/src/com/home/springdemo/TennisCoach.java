@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 
 // allow you to define a bean and its name for the id
-@Component("thatSillyCoach")
+@Component
 public class TennisCoach implements Coach {
 
 	@Override

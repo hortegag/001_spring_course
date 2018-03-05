@@ -11,7 +11,7 @@ public class AnnotationDemoApp {
 		
 		
 		// get the bean from spring cotainer
-		Coach coach = context.getBean("thatSillyCoach",Coach.class);
+		Coach coach = context.getBean("tennisCoach",Coach.class);
 		
 		
 		// call a method on the bean
