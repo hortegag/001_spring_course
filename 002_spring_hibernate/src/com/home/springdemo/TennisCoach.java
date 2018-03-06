@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 // allow you to define a bean and its name for the id
 @Component
 // create a new instance every time
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
     
 	@Autowired
