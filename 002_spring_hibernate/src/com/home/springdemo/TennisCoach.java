@@ -1,12 +1,18 @@
 package com.home.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
 // allow you to define a bean and its name for the id
 @Component
+// create a new instance every time
+@Scope("prototype")
 public class TennisCoach implements Coach {
     
 	@Autowired
@@ -39,5 +45,16 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
+	
+	@PostConstruct
+	public void doMyStartupStuff(){
+		System.out.println(">> TennisCoach: inside of poscontruct");
+	}
 
+	
+	@PreDestroy
+	public void doMyCleanupStuff(){
+		System.out.println(">> TennisCoach: inside of predestroy");
+	}
+	
 }
