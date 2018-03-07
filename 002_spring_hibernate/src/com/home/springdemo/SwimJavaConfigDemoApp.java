@@ -11,7 +11,7 @@ public class SwimJavaConfigDemoApp {
 		
 		
 		// get the bean from spring container
-		Coach coach = context.getBean("swimCoach",Coach.class);
+		SwimCoach coach = context.getBean("swimCoach",SwimCoach.class);
 
 		
 		
@@ -22,6 +22,12 @@ public class SwimJavaConfigDemoApp {
 		
 		
 		System.out.println(coach.getDailyFortune());
+		
+		// call our swim coach mehtods ... has the props values injected
+		
+		System.out.println(coach.getEmail());
+		
+		System.out.println(coach.getTeam());
 		
 		//close the context
 		context.close();

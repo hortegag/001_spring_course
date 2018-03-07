@@ -3,10 +3,13 @@ package com.home.springdemo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 //To use the bean that are manually define
 //@ComponentScan("com.home.springdemo")
+
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 
 
