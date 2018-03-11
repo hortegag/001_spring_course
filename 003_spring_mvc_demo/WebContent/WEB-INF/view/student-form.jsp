@@ -23,8 +23,14 @@
  
  
  <br><br>
+ Operating Systems:
+ Linux <form:checkbox path="operatingSystems" value="Linux"/>
+ MS Windows <form:checkbox path="operatingSystems" value="MW Windows"/>
  
  
+  <br><br>
+  
+  
  <input type="submit" value="Submit">
  
   </form:form>
