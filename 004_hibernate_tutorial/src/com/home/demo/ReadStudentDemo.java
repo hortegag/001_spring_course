@@ -55,8 +55,6 @@ public class ReadStudentDemo {
 			session.getTransaction().commit();
 			
 			System.out.println("\nGetting complete" + student.toString());
-
-			
 			System.out.println("Done!");
 			
 		} catch (Exception e) {
