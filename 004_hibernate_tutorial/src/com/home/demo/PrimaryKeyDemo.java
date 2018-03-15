@@ -24,6 +24,10 @@ public class PrimaryKeyDemo {
 			// use the session object to save Java object
 			System.out.println("Creating a 3 Student objec");
 			
+			
+			
+			
+			
 			// create a student object
 			Student student1 = new Student("Hector", "Ortega", "test@gmail.com");
 			Student student2 = new Student("Carla", "Salvatierra", "csalvagua@gmail.com");

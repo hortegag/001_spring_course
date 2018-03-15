@@ -1,11 +1,17 @@
 package com.home.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.home.demo.DateUtils;
 
 @Entity
 @Table(name="student")
@@ -25,6 +31,10 @@ public class Student {
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="date_of_birth")
+    @Temporal(TemporalType.DATE)    
+    private Date dateOfBirth;
+	
 	
 	public Student(){
 		
@@ -32,13 +42,22 @@ public class Student {
 	
 	
 
-	public Student(String firstName, String lastName, String email) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-	}
+	public Student(String firstName, String lastName, String email, Date theDateOfBirth) {
+        
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.dateOfBirth = theDateOfBirth;
+        
+    }
 
+	public Student(String firstName, String lastName, String email ) {
+        
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        
+    }
 
 
 	public String getFirstName() {
@@ -81,12 +100,21 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 
 
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email 
+				+ ", dateOfBirth=" + DateUtils.formatDate(dateOfBirth) + "]";
 	}
 	
 	
