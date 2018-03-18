@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 import com.home.entity.Instructor;
 import com.home.entity.InstructorDetail;
 
-public class DetelDemo {
+public class DeleteDemo {
 
 	public static void main(String[] args) {
 
