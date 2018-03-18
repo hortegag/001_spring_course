@@ -33,7 +33,7 @@ public class GetInstructorDetail {
 			session.beginTransaction();
 			
 			// get the instructor detail object
-			int idDetail = 2;
+			int idDetail = 2324;
 			InstructorDetail instructorDetail = session.get(InstructorDetail.class, idDetail);
 			
 			// print the instructor detail
@@ -48,12 +48,16 @@ public class GetInstructorDetail {
 
 			// commit transaction
 			session.getTransaction().commit();
-			session.close();
+			
 			System.out.println("Done!");
 			
 		} catch (Exception e) {
+			e.printStackTrace();
 			
 		} finally {
+			
+			session.close();
+			
 			factory.close();
 		}
 		
