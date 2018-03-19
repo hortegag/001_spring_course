@@ -33,7 +33,7 @@ public class DeleteInstructorDetail {
 			session.beginTransaction();
 			
 			// get the instructor detail object
-			int idDetail = 2;
+			int idDetail = 3;
 			InstructorDetail instructorDetail = session.get(InstructorDetail.class, idDetail);
 			
 			// print the instructor detail
@@ -43,8 +43,10 @@ public class DeleteInstructorDetail {
 			// print the associated instructor
 			System.out.println("the associated instructor "+instructorDetail.getInstructor());
 			
+			// remove the object reference
+			instructorDetail.getInstructor().setInstructorDetail(null);
+			
 			// delete de instructor detail
-			// will also delete the instrcutor object beacause the cascade
 			System.out.println("Deleting tempInstructor detail");
 			session.delete(instructorDetail);
 			
