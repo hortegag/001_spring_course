@@ -3,12 +3,13 @@ package com.home.demo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import com.home.entity.Course;
 import com.home.entity.Instructor;
 import com.home.entity.InstructorDetail;
 
-public class EagerLazyDemo {
+public class FetchJoinDemo {
 
 	public static void main(String[] args) {
 
@@ -31,18 +32,22 @@ public class EagerLazyDemo {
 			
 			// get the instructor from db
 			int id = 1;
+			//option 2: using HQL
 			
-			Instructor theInstructor = session.get(Instructor.class, id);
+			Query<Instructor> query = session.createQuery("select i from Instructor i "
+					+ "JOIN FETCH i.courses "
+					+"where i.id = :instructorId",
+					Instructor.class);
 			
+			
+			// set parameter on query
+			
+			query.setParameter("instructorId", id);
+			
+			//execute query and get instructor
+			Instructor theInstructor = query.getSingleResult();
 			
 			System.out.println("Print the Instructor: "+theInstructor);
-
-
-			// retrieve the courses from that instructor
-			System.out.println("Print the courses: "+theInstructor.getCourses());
-
-
-			
 
 			// commmit transaction
 			session.getTransaction().commit();
