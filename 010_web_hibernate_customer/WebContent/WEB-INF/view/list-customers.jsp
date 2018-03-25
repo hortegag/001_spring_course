@@ -6,6 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>List Customers</title>
+
+<link type="text/css"
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/resources/css/style.css"
+/>
+
+
+
 </head>
 <body>
 <h1>The list of customers</h1>
