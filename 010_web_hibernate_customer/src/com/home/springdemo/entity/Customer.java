@@ -13,7 +13,7 @@ public class Customer {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="Id")
+	@Column(name="id")
 	private int id;
 	
 	@Column(name="first_name")
@@ -37,6 +37,18 @@ public class Customer {
 		this.lastName = lastName;
 		this.email = email;
 	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 
 	public String getFirstName() {
 		return firstName;

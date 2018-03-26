@@ -30,6 +30,9 @@
 	
 	<div id="container">
 		<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+			
+			<!-- keep track of the id that is being updated -->
+			<form:hidden path="id"/>
 			<table>
 				<tbody>
 					<tr>
