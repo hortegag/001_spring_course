@@ -29,4 +29,32 @@ public class LoggingAspect {
 	public void beforeAnyReturnMethod(){
 		System.out.println("++++++++>Excuting before any add method");
 	}
+	
+	// Allways have to use the fully qualified name of the parameter
+	// point cut expression match any method with a parameter account
+	@Before("execution(* add*(com.home.aopdemo.Account))")
+	public void beforeAnyMethodWithParameterAccout(){
+		System.out.println("///////////>Excuting before any add method");
+	}
+	
+	
+	// point cut expression match any method with a parameter account
+	@Before("execution(* add*(com.home.aopdemo.Account,..))")
+	public void beforeAnyMethodWithTwoParameters(){
+		System.out.println("||||||||||>Excuting before any add method");
+	}	
+	
+	// point cut expression match any method with any parameters
+	@Before("execution(* add*(..))")
+	public void beforeAnyMethodWithAnyParameters(){
+		System.out.println("_____________>Excuting before any add method");
+	}	
+	
+	// point cut expression match any class and any method with any parameters
+	@Before("execution(* com.home.aopdemo.dao.*.*(..))")
+	public void beforeMatchPackage(){
+		System.out.println(">>>>>>>>>>>>>>Excuting before any add method");
+	}	
+	
+	
 }

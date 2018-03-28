@@ -38,8 +38,18 @@ public class MainDemoApp {
 				
 		System.out.println("add test member accout");
 		membershipDAO.addTesMemberAccount();
-				
-				
+		
+		Account account = new Account();
+		
+		System.out.println("adding a new accoutn with a parameter");
+		accountDAO.addNewAccount(account);
+		
+		
+		System.out.println("adding a important person account");
+		accountDAO.addNewAccount(account,true);
+		
+		
+		
 		// close the context
 		context.close();
 
