@@ -41,8 +41,8 @@ public class LoggingAspect {
 			
 			myLogger.warning(e.getMessage());
 			
-			// give user a custom message
-			result = "Major accident , private aop helicopter on the way";
+			// rethrowing exception
+			throw e;
 		}
 		
 		long end = System.currentTimeMillis();
