@@ -23,4 +23,10 @@ public class LoggingAspect {
 		System.out.println("*********>Excuting before any add method");
 	}
 
+	
+	// match any return type the modifier public or public could be optional
+	@Before("execution(* add*())")
+	public void beforeAnyReturnMethod(){
+		System.out.println("++++++++>Excuting before any add method");
+	}
 }

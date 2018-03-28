@@ -36,6 +36,8 @@ public class MainDemoApp {
 		
 		membershipDAO.addAccount();
 				
+		System.out.println("add test member accout");
+		membershipDAO.addTesMemberAccount();
 				
 				
 		// close the context
