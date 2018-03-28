@@ -24,6 +24,8 @@ public class AfterReturningMainDemo {
 		//
 		System.out.println("------------------Ending afterreturning demo--------------");
 		
+		System.out.println(accounts);
+		
 		// close the context
 		context.close();
 
