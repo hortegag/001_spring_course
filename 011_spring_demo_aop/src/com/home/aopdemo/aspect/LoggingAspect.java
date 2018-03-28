@@ -8,8 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 	
-	// realated advices for loggin
-	
+
 	// @Before advice
 	//match on any calls to addAcount method in any class
 	@Before("execution(public void com.home.aopdemo.dao.AccountDAO.addAccount())")
