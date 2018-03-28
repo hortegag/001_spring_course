@@ -27,6 +27,11 @@ public class MainDemoApp {
 		System.out.println("Second call");
 		accountDAO.addAccount();
 		
+		
+		System.out.println("call addtest");
+		accountDAO.addTestAccount();
+		
+		
 		MembershipDAO membershipDAO = context.getBean("membershipDAO",MembershipDAO.class);
 		
 		membershipDAO.addAccount();

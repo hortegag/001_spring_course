@@ -14,7 +14,13 @@ public class LoggingAspect {
 	//match on any calls to addAcount method in any class
 	@Before("execution(public void com.home.aopdemo.dao.AccountDAO.addAccount())")
 	public void beforeAddAccountAdvice(){
-		System.out.println("========>Excuting before advice method \n\n\n");
+		System.out.println("========>Excuting before advice method ");
+	}
+	
+	
+	@Before("execution(public void add*())")
+	public void beforeAddMethod(){
+		System.out.println("*********>Excuting before any add method");
 	}
 
 }
