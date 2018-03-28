@@ -12,7 +12,7 @@ public class LoggingAspect {
 	
 	// @Before advice
 	//match on any calls to addAcount method in any class
-	@Before("execution(public void addAccount())")
+	@Before("execution(public void com.home.aopdemo.dao.AccountDAO.addAccount())")
 	public void beforeAddAccountAdvice(){
 		System.out.println("========>Excuting before advice method \n\n\n");
 	}
