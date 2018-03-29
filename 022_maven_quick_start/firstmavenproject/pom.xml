@@ -24,5 +24,30 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    
+    <!-- https://mvnrepository.com/artifact/com.atlassian.mail/atlassian-mail -->
+	<dependency>
+	    <groupId>com.atlassian.mail</groupId>
+	    <artifactId>atlassian-mail</artifactId>
+	    <version>4.0.4</version>
+	</dependency>
+    
+    
+    
   </dependencies>
+  
+  <repositories>
+  	<repository>
+  		<id>atlassian</id>
+  		<name>the atlassian repo</name>
+  		<url>https://maven.atlassian.com/content/repositories/atlassian-public</url>
+  	</repository>
+  </repositories>
+  
+  
+  
+  
+  
+  
 </project>
