@@ -22,16 +22,20 @@
 	</p>
 	
 	<hr>
-	
+	<security:authorize access="hasRole('MANAGER')">
 	<p>
 		<a href="${pageContext.request.contextPath}/leaders" >Leadership Meeting</a>
 		Only for managers
 	</p>
+	</security:authorize>
+	
+	<security:authorize access="hasRole('ADMIN')">
 	
 	<p>
 		<a href="${pageContext.request.contextPath}/systems" >Systems Options</a>
 		Only for Admins
 	</p>
+	</security:authorize>
 
 	<!-- Add logout button -->
 	<form:form action="${pageContext.request.contextPath}/logout"
